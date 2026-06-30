@@ -1,5 +1,5 @@
 //PEGANDO ELEMENTOS DO DOM
-const formDados = document.querySelector('#div-geral')
+const formDados = document.querySelector('#div-form-geral')
 const divResultado = document.querySelector('#div-dados')
 
 //CAPTURANDO O EVENTO SUBMIT DO FORMULÁRIO
@@ -16,6 +16,11 @@ if (num1 % 3 === 0 && num1 % 7 === 0) {
 } else {
     console.log(num1 + " não é divisível por 3 e por 7.");
 }
+
+divResultado.innerHTML = `O número: ${num1.toFixed(2).replace('.',',')}`
+
+    formDados.reset()
+    
     
 
 })
